@@ -159,9 +159,9 @@ const Collections = () => {
     <div className="text-center w-full h-full">
       <div className="w-full h-full flex justify-center items-center">
         <iframe
-          src="https://www.google.com/maps?q=Ground+Floor,+Besides+MF+Khan,+Pavan+Enclave,+Daba+Garden+Rd,+Prakasaraopeta,+Nehru+Nagar,+Ram+Nagar,+Visakhapatnam,+Andhra+Pradesh+530020&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.6021389862262!2d83.30243109999999!3d17.7162454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943a620adefa9%3A0x6b432b3a8d6eda4d!2sTangudu%20Home%20%26%20Office%20Furniture%20%E2%80%93%20Daba%20Gardens%20%7C%20Best%20Furniture%20Showroom%20in%20Vizag%20%7C%20Duroflex%20Mattress%20Store%20in%20Daba%20Gardens!5e0!3m2!1sen!2sin!4v1754025202089!5m2!1sen!2sin"
           width="100%"
-          height="100%"
+          height="50%"
           style={{ border: 0, borderRadius: '1rem', width: '100%', height: '100%' }}
           allowFullScreen={true}
           loading="lazy"

@@ -35,7 +35,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Our Showroom",
-      details: ["Ground Floor, Besides MF Khan, Pavan Enclave, Daba Garden Rd, Prakasaraopeta, Nehru Nagar, Ram Nagar, Visakhapatnam, Andhra Pradesh 530020"]
+      details: ["1. Ground Floor, Besides MF Khan, Pavan Enclave, Daba Garden Rd, Prakasaraopeta, Nehru Nagar, Ram Nagar, Visakhapatnam, Andhra Pradesh 530020",
+        "2. Main Road, Kancharapalem, Visakhapatnam - 530008 (Beside Durga Nagar Arche)"]
     },
     {
       icon: Phone,
@@ -70,7 +71,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            We'd love to help you create the perfect space. Contact us for personalized 
+            We'd love to help you create the perfect space. Contact us for personalized
             assistance, design consultations, or any questions about our furniture collections.
           </p>
         </div>
@@ -101,7 +102,7 @@ const Contact = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
+
             {/* Contact Form */}
             <div>
               <div className="mb-8">
@@ -214,21 +215,21 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Our Showroom</h3>
               <div className="aspect-video bg-gray-200 rounded-2xl overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-                
+
                   <div className="text-center w-full h-full">
                     {/* <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Our Showroom</h3> */}
-<div className="w-full h-64 md:h-96 rounded-xl overflow-hidden">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.428938753809!2d83.30254287517654!3d17.726675683242845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395e9e8e3e6e3f%3A0x5d3d4e1e5a3c1b8c!2sGround%20Floor%2C%20Besides%20MF%20Khan%2C%20Pavan%20Enclave%2C%20Daba%20Garden%20Rd%2C%20Prakasaraopeta%2C%20Nehru%20Nagar%2C%20Ram%20Nagar%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530020%2C%20India!5e0!3m2!1sen!2sin!4v1719936800000!5m2!1sen!2sin"
-    width="100%"
-    height="100%"
-    style={{ border: 0, width: '100%', height: '100%' }}
-    allowFullScreen={true}
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    title="Our Showroom Location"
-  ></iframe>
-</div>
+                    <div className="w-full h-64 md:h-96 rounded-xl overflow-hidden">
+                      <iframe
+                        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.6021389862262!2d83.30243109999999!3d17.7162454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943a620adefa9%3A0x6b432b3a8d6eda4d!2sTangudu%20Home%20%26%20Office%20Furniture%20%E2%80%93%20Daba%20Gardens%20%7C%20Best%20Furniture%20Showroom%20in%20Vizag%20%7C%20Duroflex%20Mattress%20Store%20in%20Daba%20Gardens!5e0!3m2!1sen!2sin!4v1754025202089!5m2!1sen!2sin'
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, width: '100%', height: '100%' }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Our Showroom Location"
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
