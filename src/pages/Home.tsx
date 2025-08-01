@@ -1,0 +1,226 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Truck, Shield, Headphones } from 'lucide-react';
+import Hero from '../components/Hero';
+import OffersCarousel from '../components/OffersCarousel';
+import ProductCard from '../components/ProductCard';
+import { products } from '../data/products';
+
+const Home = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      text: "The quality and craftsmanship exceeded our expectations. Every piece is a work of art.",
+      author: "Sarah Johnson",
+      role: "Interior Designer",
+      rating: 5
+    },
+    {
+      text: "Exceptional service and beautiful furniture. Our home has been transformed completely.",
+      author: "Michael Chen",
+      role: "Homeowner",
+      rating: 5
+    },
+    {
+      text: "Professional delivery and installation. The attention to detail is remarkable.",
+      author: "Emma Wilson",
+      role: "Architect",
+      rating: 5
+    }
+  ];
+
+  const features = [
+    { icon: Truck, title: "Free Delivery", description: "Complimentary white-glove delivery service" },
+    { icon: Shield, title: "5-Year Warranty", description: "Comprehensive coverage on all products" },
+    { icon: Headphones, title: "24/7 Support", description: "Expert assistance whenever you need it" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const featuredProducts = products.slice(0, 8);
+
+  return (
+    <div className="min-h-screen">
+      <Hero />
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Collections */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Collections</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Discover our carefully curated selection of premium furniture pieces
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="group relative overflow-hidden rounded-2xl aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Living Room Collection"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">Living Room</h3>
+                <p className="text-gray-200 mb-4">Comfort meets elegance</p>
+                <Link to="/collections" className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
+                  Explore <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Bedroom Collection"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">Bedroom</h3>
+                <p className="text-gray-200 mb-4">Serene sanctuary design</p>
+                <Link to="/collections" className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
+                  Explore <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Dining Collection"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">Dining</h3>
+                <p className="text-gray-200 mb-4">Gather in style</p>
+                <Link to="/collections" className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
+                  Explore <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <OffersCarousel />
+
+      {/* Featured Products */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Handpicked pieces that define luxury and comfort
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              to="/shop"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-full hover:from-amber-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Products <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-16">What Our Clients Say</h2>
+          
+          <div className="relative h-48">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className={`absolute inset-0 transition-all duration-500 ${
+                  index === currentTestimonial ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+              >
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-6 w-6 text-amber-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-xl italic mb-6">
+                  "{testimonial.text}"
+                </blockquote>
+                <cite className="text-lg font-semibold">
+                  {testimonial.author}
+                  <span className="text-gray-300 font-normal block">{testimonial.role}</span>
+                </cite>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center space-x-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentTestimonial ? 'bg-amber-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Stay Inspired</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Subscribe to our newsletter for design tips, new arrivals, and exclusive offers
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-6 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            />
+            <button className="px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold rounded-full hover:from-amber-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
