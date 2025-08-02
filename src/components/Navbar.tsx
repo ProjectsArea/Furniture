@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-lg' 
+        ? 'bg-black/90 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +48,14 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
-              Home
-            </Link>
-            <Link to="/offers" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+          <Link 
+  to="/" 
+  className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium"
+>
+  Home
+</Link>
+
+            <Link to="/offers" className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
               Offers
             </Link>
             
@@ -60,7 +64,7 @@ const Navbar = () => {
               onMouseEnter={() => setActiveDropdown('shop')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <Link to="/shop" className="flex items-center text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+              <Link to="/shop" className="flex items-center text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
                 Shop <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
               
@@ -90,29 +94,29 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/collections" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+            <Link to="/collections" className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
               Collections
             </Link>
-            <Link to="/about" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link to="/blog" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
               Blog
             </Link>
-            <Link to="/contact" className="text-gray-900 hover:text-amber-600 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 font-medium">
               Contact
             </Link>
           </div>
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-900 hover:text-amber-600 transition-colors duration-300">
+            <button className="p-2 text-[#FAFA33] hover:text-amber-600 transition-colors duration-300">
               <Search className="h-5 w-5" />
             </button>
-            <button className="p-2 text-gray-900 hover:text-amber-600 transition-colors duration-300">
+            <button className="p-2 text-[#FAFA33] hover:text-amber-600 transition-colors duration-300">
               <User className="h-5 w-5" />
             </button>
-            <Link to="/cart" className="p-2 text-gray-900 hover:text-amber-600 transition-colors duration-300 relative">
+            <Link to="/cart" className="p-2 text-[#FAFA33] hover:text-amber-600 transition-colors duration-300 relative">
               <ShoppingBag className="h-5 w-5" />
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -148,22 +152,22 @@ const Navbar = () => {
             </div>
             
             <nav className="space-y-6">
-              <Link to="/" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 Home
               </Link>
-              <Link to="/shop" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/shop" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 Shop
               </Link>
-              <Link to="/collections" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/collections" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 Collections
               </Link>
-              <Link to="/about" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/about" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 About
               </Link>
-              <Link to="/blog" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/blog" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 Blog
               </Link>
-              <Link to="/contact" className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
+              <Link to="/contact" className="block text-lg font-medium text-[#FAFA33] hover:text-amber-600 transition-colors">
                 Contact
               </Link>
             </nav>

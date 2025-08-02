@@ -77,16 +77,16 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* Living Room */}
+            {/* Mattress */}
             <div className="group relative overflow-hidden rounded-2xl aspect-square">
               <img 
-                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="Living Room Collection"
+                src="https://5.imimg.com/data5/UA/YH/IP/SELLER-1408445/duroflex-mattress-in-bangalore-500x500.jpg" 
+                alt="Mattress Collection"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Living Room</h3>
+                <h3 className="text-2xl font-bold mb-2">Mattress</h3>
                 <p className="text-gray-200 mb-4">Comfort meets elegance</p>
                 <Link to="/collections" className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
                   Explore <ArrowRight className="ml-2 h-4 w-4" />
@@ -111,16 +111,16 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Dining */}
+            {/* Cafeteria */}
             <div className="group relative overflow-hidden rounded-2xl aspect-square">
               <img 
-                src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="Dining Collection"
+                src="https://lakshmishomestyle.in/wp-content/uploads/2023/02/CLASSIC_SMART_Cafeteria_Chairs_Collections.jpg" 
+                alt="Cafeteria Collection"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Dining</h3>
+                <h3 className="text-2xl font-bold mb-2">Cafeteria</h3>
                 <p className="text-gray-200 mb-4">Gather in style</p>
                 <Link to="/collections" className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors">
                   Explore <ArrowRight className="ml-2 h-4 w-4" />

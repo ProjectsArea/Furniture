@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import p from "../../public/main.jpeg";
+import p1 from "../../public/main1.jpeg";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image: p,
       title: "Luxury Redefined",
       subtitle: "Discover premium furniture that transforms your space into a masterpiece",
-      cta: "Explore Collection"
+      cta: "Explore Collection",
+      classname: "bg-contain bg-center h-auto"
     },
     {
       image: "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200",

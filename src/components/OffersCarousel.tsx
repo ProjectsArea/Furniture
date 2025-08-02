@@ -9,7 +9,7 @@ const offerImages = [
 
 const OffersInfiniteCarousel: React.FC = () => {
   return (
-    <section className="w-full overflow-hidden my-12">
+    <section className="w-full overflow-hidden my-12" style={{ marginTop: '-30px' }}>
       <style>
         {`
           @keyframes scroll {
@@ -26,14 +26,14 @@ const OffersInfiniteCarousel: React.FC = () => {
 
       <div className="relative w-full">
 
-                <h1 className="text-2xl font-bold text-center -mt-2">Special Offers</h1>              
-        <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused]">
+        <h1 className="text-2xl font-bold text-center">Special Offers</h1>
+        <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused] mt-10">
           {[...offerImages, ...offerImages].map((src, idx) => (
             <div
               key={idx}
               className="min-w-[220px] md:min-w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
-          
+
               <img
                 src={src}
                 alt={`Offer ${idx + 1}`}

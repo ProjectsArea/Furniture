@@ -1,6 +1,12 @@
 import product from "../../public/cafe3.jpeg";
 import product1 from "../../public/ps1.jpeg";
 import product2 from "../../public/ps3.jpeg"; 
+import product3 from "../../public/bed.jpeg";
+import product4 from "../../public/bed1.jpeg";
+import product5 from "../../public/bed2.jpeg";  
+import product6 from "../../public/pillow1.jpeg"; 
+import product7 from "../../public/ps.jpeg";
+import product8 from "../../public/matress.png";
 
 export interface Product {
   id: number;
@@ -31,11 +37,11 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Luxe Velvet Sofa",
+    name: "Public Chair",
     price: 2899,
     originalPrice: 3299,
-    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
-    category: "Living Room",
+    image: product7,
+    category: "Public Sitting",
     rating: 4.8,
     reviews: 124,
     isNew: false,
@@ -44,25 +50,25 @@ export const products: Product[] = [
     features: ["Premium velvet upholstery", "Hardwood frame", "Down-filled cushions", "Stain-resistant coating"],
     materials: ["Velvet", "Hardwood", "Steel springs"],
     dimensions: { width: 84, height: 32, depth: 36 },
-    colors: ["Navy", "Emerald", "Charcoal", "Cream"],
+    colors: ["biscuit", "Cream"],
     inStock: true,
     modelUrl: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
     imageSequence: ["https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600"]
   },
   {
     id: 2,
-    name: "Modern Oak Dining Table",
+    name: "Mattress",
     price: 1899,
-    image: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600",
-    category: "Dining",
+    image: product8,
+    category: "Mattress",
     rating: 4.9,
     reviews: 89,
     isNew: true,
-    description: "Elegant oak dining table with live edge design, perfect for contemporary dining spaces.",
-    features: ["Solid oak construction", "Live edge finish", "Seats 6-8 people", "Protective coating"],
-    materials: ["Oak wood", "Natural finish"],
+    description: "Sleep like never before with our premium orthopedic memory foam mattress, designed to provide cloud-like comfort, optimal spinal support, and temperature-regulated rest. Crafted using high-quality materials and precision engineering, it adapts to your body’s unique shape, ensuring a rejuvenating sleep experience every night.",
+    features: ["Ergonomic Support", "Temperature Regulation", "Multi-Layer Comfort", " Breathable & Cool Sleep"],
+    materials: ["Cooling Materials", "Latex","Gel Foam"],
     dimensions: { width: 96, height: 30, depth: 42 },
-    colors: ["Natural Oak", "Dark Walnut"],
+    colors: ["blue"],
     inStock: true,
     imageSequence: ["https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600"]
   },
@@ -87,18 +93,18 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Minimalist Bed Frame",
-    price: 1599,
-    image: "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600",
+    price: 70000,
+    image: product4,
     category: "Bedroom",
     rating: 4.6,
     reviews: 203,
     description: "Clean-lined bed frame with upholstered headboard for modern bedroom aesthetics.",
-    features: ["Upholstered headboard", "Solid wood frame", "Easy assembly", "Under-bed storage space"],
+    features: ["Upholstered headboard", "Solid wood frame", "Easy assembly"],
     materials: ["Oak wood", "Linen upholstery"],
     dimensions: { width: 86, height: 48, depth: 66 },
     colors: ["Natural", "Charcoal", "White"],
     inStock: true,
-    imageSequence: ["https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600"]
+    imageSequence: [product4]
   },
   {
     id: 5,
@@ -170,9 +176,9 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Luxury Wardrobe",
+    name: "Luxury Bed",
     price: 2599,
-    image: "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: product3,
     category: "Bedroom",
     rating: 4.9,
     reviews: 156,
@@ -221,9 +227,9 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Premium Mattress",
-    price: 1899,
-    originalPrice: 2299,
-    image: "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=600",
+    price: 80000,
+    originalPrice: 100000,
+    image: product5,
     category: "Bedroom",
     rating: 4.8,
     reviews: 312,
@@ -232,9 +238,9 @@ export const products: Product[] = [
     features: ["Memory foam layers", "Pocket spring system", "Cooling gel technology", "Hypoallergenic"],
     materials: ["Memory foam", "Pocket springs", "Cooling gel"],
     dimensions: { width: 76, height: 12, depth: 80 },
-    colors: ["White"],
+    colors: ["Brown"],
     inStock: true,
-    imageSequence: ["https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=600"]
+    imageSequence: [product5]
   },
   {
     id: 13,
@@ -287,5 +293,23 @@ export const products: Product[] = [
       inStock: true,
       imageSequence: [product2], // Add more if needed
     },
+    {
+      id: 16,
+      name: "Premium Pillow",
+      price: 5000,
+      originalPrice: 7000,
+      image: product6,
+      category: "Bedroom",
+      rating: 4.7,
+      reviews: 185,
+      isSale: true,
+      description: "Ergonomic pillow with memory foam and cooling gel for superior comfort and neck support.",
+      features: ["Ergonomic design", "Memory foam core", "Cooling gel layer", "Hypoallergenic cover"],
+      materials: ["Memory foam", "Cooling gel", "Breathable fabric"],
+      dimensions: { width: 40, height: 12, depth: 18 },
+      colors: ["White"],
+      inStock: true,
+      imageSequence: [product6]
+    }
   ];
   
