@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import p from "../../public/main.jpeg";
-import p1 from "../../public/main1.jpeg";
+import p1 from "../../public/image.png"; 
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: p,
+      image: p1,
       title: "Luxury Redefined",
       subtitle: "Discover premium furniture that transforms your space into a masterpiece",
       cta: "Explore Collection",
